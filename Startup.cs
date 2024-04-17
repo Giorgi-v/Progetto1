@@ -27,7 +27,8 @@ namespace Progetto1
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                string nome = context.Request.Query("Giorgia");
+                await context.Response.WriteAsync($"Hello {nome}!");
             });
         }
     }
